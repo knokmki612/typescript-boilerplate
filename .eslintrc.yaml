@@ -1,0 +1,17 @@
+root: true
+parser: "@typescript-eslint/parser"
+plugins:
+  - "@typescript-eslint"
+  - tsc
+extends:
+  - eslint:recommended
+  - plugin:@typescript-eslint/recommended
+  - prettier
+rules:
+  "tsc/config":
+    - 1
+    - configFile: "tsconfig.json"
+overrides:
+  - files: [jest.config.js]
+    env:
+      commonjs: true
