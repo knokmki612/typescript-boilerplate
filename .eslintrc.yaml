@@ -9,7 +9,7 @@ extends:
   - prettier
 rules:
   "tsc/config":
-    - 1
+    - error
     - configFile: "tsconfig.json"
 overrides:
   - files: [jest.config.js]
