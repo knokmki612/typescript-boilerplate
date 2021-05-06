@@ -1,8 +1,8 @@
-name: Review
+name: Format
 on:
   pull_request:
 jobs:
-  review:
+  format:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
@@ -17,7 +17,6 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: ${{ runner.os }}-yarn-
       - run: yarn install --check-files --frozen-lockfile --non-interactive
-      - run: yarn lint
       - id: format
         run: |
           yarn format
@@ -26,4 +25,3 @@ jobs:
         run: |
           git --config "user.name=${{ github.actor }}" --config "user.email=${{ github.actor }}@users.noreply.github.com" commit --all --message="bot: format"
           git push origin HEAD
-      - run: yarn test
