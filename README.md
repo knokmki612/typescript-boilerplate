@@ -3,4 +3,4 @@
 - No specifying directory hierarchy
 - CI (Lint / Test / Format) ready
 - Library update automation ready
-- Configure with recommend presets as possible
+- Configure with recommended presets as possible
