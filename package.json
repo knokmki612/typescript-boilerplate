@@ -26,7 +26,7 @@
     "format:eslint": "eslint --fix .",
     "format:prettier": "prettier --write .",
     "lint": "eslint .",
-    "lint:rdjson": "eslint -f rdjson .",
+    "lint:rdjson": "eslint --format rdjson .",
     "test": "jest --passWithNoTests"
   }
 }
