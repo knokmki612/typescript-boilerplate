@@ -23,5 +23,5 @@ jobs:
           echo "::set-output name=status::$(git status --porcelain)"
       - if: steps.format.outputs.status != ''
         run: |
-          git --config "user.name=${{ github.actor }}" --config "user.email=${{ github.actor }}@users.noreply.github.com" commit --all --message="bot: format"
+          git -c "user.name=${{ github.actor }}" -c "user.email=${{ github.actor }}@users.noreply.github.com" commit -a -m "bot: format"
           git push origin HEAD
