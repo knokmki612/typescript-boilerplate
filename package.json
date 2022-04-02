@@ -35,10 +35,9 @@
   "main": "index.ts",
   "repository": "git@github.com:knokmki612/typescript-boilerplate.git",
   "scripts": {
-    "format": "run-s format:*",
-    "format:eslint": "eslint --fix .",
-    "format:prettier": "prettier --write .",
+    "format": "prettier --write .",
     "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
     "test": "jest --passWithNoTests"
   }
 }
