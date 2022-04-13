@@ -7,7 +7,7 @@
     "url": "https://github.com/knokmki612/typescript-boilerplate/issues"
   },
   "devDependencies": {
-    "@tsconfig/node16-strictest": "1.0.0",
+    "@tsconfig/node16-strictest": "1.0.1",
     "@types/jest": "27.4.1",
     "@typescript-eslint/eslint-plugin": "5.19.0",
     "@typescript-eslint/parser": "5.19.0",

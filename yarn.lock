@@ -833,10 +833,10 @@
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-1.1.2.tgz#ccb91445360179a04e7fe6aff78c00ffc1eeaf82"
   integrity sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==
 
-"@tsconfig/node16-strictest@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@tsconfig/node16-strictest/-/node16-strictest-1.0.0.tgz#ce2ac0bc61b206acd7dbba28c7fe78cd0dac2f5f"
-  integrity sha512-MTrFOCoWfjjhFpAoeHmWXFnYeRPxMBMgaNVszBYXJgPFi7XHYdRrDatgyk+Nb0ht7jWP3j/J3xXfvSXIjzRVKA==
+"@tsconfig/node16-strictest@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@tsconfig/node16-strictest/-/node16-strictest-1.0.1.tgz#0f73165cdcfc1b63b885b4d82a48bc0ed0cb6596"
+  integrity sha512-VN0sa4DUljguhKIEbdIP2NqcYoC6OuLM9rrPb53PwnFJiBRwakpLH0k0Qp3gqcQxb6H4wtL4A6VGhFwL5DTf2A==
 
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.14":
   version "7.1.14"
