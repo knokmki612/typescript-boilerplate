@@ -854,10 +854,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@tsconfig/node16-strictest@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@tsconfig/node16-strictest/-/node16-strictest-1.0.1.tgz#0f73165cdcfc1b63b885b4d82a48bc0ed0cb6596"
-  integrity sha512-VN0sa4DUljguhKIEbdIP2NqcYoC6OuLM9rrPb53PwnFJiBRwakpLH0k0Qp3gqcQxb6H4wtL4A6VGhFwL5DTf2A==
+"@tsconfig/node16-strictest@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@tsconfig/node16-strictest/-/node16-strictest-1.0.2.tgz#cab3a173fbe50c48e9de5fef88e89f1a0332d156"
+  integrity sha512-JvMcb/1nOuVT78/vDLbwo/LLZtdjZcqZfh014mD0dnw5b+Gtt6AEZzzWTpopFbvW3TvcYOSAfV7fd3sK9Ai8Dg==
 
 "@types/babel__core@^7.1.14":
   version "7.1.14"
