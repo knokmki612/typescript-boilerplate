@@ -16,6 +16,12 @@ jobs:
           node-version: "16"
           cache: "yarn"
       - run: yarn install --check-files --frozen-lockfile --non-interactive
+      - id: fixpack
+        run: yarn fixpack
+        continue-on-error: true
+      - if: steps.fixpack.outcome == 'failure'
+        run: |
+          git -c "user.name=github-actions[bot]" -c "user.email=github-actions[bot]@users.noreply.github.com" commit -a -m "bot: fixpack"
       - id: lint
         run: |
           yarn lint
@@ -33,3 +39,4 @@ jobs:
         run: |
           git -c "user.name=github-actions[bot]" -c "user.email=github-actions[bot]@users.noreply.github.com" commit -a -m "bot: format"
           git push origin HEAD
+      - run: yarn build
