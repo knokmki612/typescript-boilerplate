@@ -36,9 +36,9 @@
   "main": "dist/index.js",
   "repository": "git@github.com:knokmki612/typescript-boilerplate.git",
   "scripts": {
+    "build": "tsup index.ts",
     "format": "prettier --write .",
     "lint": "eslint --fix .",
-    "test": "jest --passWithNoTests",
-    "build": "tsup index.ts"
+    "test": "jest --passWithNoTests"
   }
 }
