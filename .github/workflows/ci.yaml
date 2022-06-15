@@ -22,6 +22,7 @@ jobs:
       - if: steps.fixpack.outcome == 'failure'
         run: |
           git -c "user.name=github-actions[bot]" -c "user.email=github-actions[bot]@users.noreply.github.com" commit -a -m "bot: fixpack"
+          git push origin HEAD
       - id: lint
         run: |
           yarn lint
