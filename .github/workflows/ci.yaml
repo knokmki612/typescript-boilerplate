@@ -1,6 +1,9 @@
 name: CI
 on:
   pull_request:
+  push:
+    branches:
+      - main
 jobs:
   ci:
     runs-on: ubuntu-20.04
@@ -13,13 +16,28 @@ jobs:
           node-version: "16"
           cache: "yarn"
       - run: yarn install --check-files --frozen-lockfile --non-interactive
-      - run: yarn lint
+      - id: fixpack
+        run: yarn fixpack
+        continue-on-error: true
+      - if: steps.fixpack.outcome == 'failure'
+        run: |
+          git -c "user.name=github-actions[bot]" -c "user.email=github-actions[bot]@users.noreply.github.com" commit -a -m "bot: fixpack"
+          git push origin HEAD
+      - id: lint
+        run: |
+          yarn lint
+          echo "::set-output name=status::$(git status --porcelain)"
+      - if: steps.lint.outputs.status != ''
+        run: |
+          git -c "user.name=github-actions[bot]" -c "user.email=github-actions[bot]@users.noreply.github.com" commit -a -m "bot: lint"
+          git push origin HEAD
       - run: yarn test
       - id: format
         run: |
-          yarn run-s lint:fix format
+          yarn format
           echo "::set-output name=status::$(git status --porcelain)"
       - if: steps.format.outputs.status != ''
         run: |
           git -c "user.name=github-actions[bot]" -c "user.email=github-actions[bot]@users.noreply.github.com" commit -a -m "bot: format"
           git push origin HEAD
+      - run: yarn build
