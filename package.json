@@ -36,8 +36,7 @@
   "repository": "git@github.com:knokmki612/typescript-boilerplate.git",
   "scripts": {
     "format": "prettier --write .",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
+    "lint": "eslint --fix .",
     "test": "jest --passWithNoTests"
   }
 }
