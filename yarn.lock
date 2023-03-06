@@ -1035,10 +1035,10 @@
   dependencies:
     "@sinonjs/commons" "^2.0.0"
 
-"@tsconfig/node16-strictest@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@tsconfig/node16-strictest/-/node16-strictest-1.0.4.tgz#14218b0341223d5caa692fa789fb374909690875"
-  integrity sha512-kp6/DuAoKzHVv5U+p0uOesYbjrEvrYVNdQMl163a+yXXUv9twabvkCGEn3pmVxKXB45JU5MPGolDDWnONZL5ZQ==
+"@tsconfig/node18-strictest@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@tsconfig/node18-strictest/-/node18-strictest-1.0.0.tgz#d7c49f29ef95c47182995bd2bfcf8c177512a8de"
+  integrity sha512-bOuNKwO4Fzbt+Su5wqI9zNHwx5C25gLnutwVQA1sBZk0cW8UjVPVcwzIUhJIIJDUx7zDEbAwdCD2HfvIsV8dYg==
 
 "@types/babel__core@^7.1.14":
   version "7.1.14"

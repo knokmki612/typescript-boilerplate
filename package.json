@@ -7,7 +7,7 @@
     "url": "https://github.com/knokmki612/typescript-boilerplate/issues"
   },
   "devDependencies": {
-    "@tsconfig/node16-strictest": "1.0.4",
+    "@tsconfig/node18-strictest": "1.0.0",
     "@types/jest": "29.4.0",
     "@typescript-eslint/eslint-plugin": "5.54.0",
     "@typescript-eslint/parser": "5.54.0",
@@ -23,7 +23,7 @@
     "typescript": "4.9.5"
   },
   "engines": {
-    "node": "16"
+    "node": "18"
   },
   "homepage": "https://github.com/knokmki612/typescript-boilerplate#readme",
   "keywords": [
