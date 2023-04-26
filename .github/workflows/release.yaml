@@ -29,8 +29,8 @@ jobs:
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
           git branch --move release
-          yarn versionup ${{ github.event.inputs.semver }} --yes
           git push origin release
+          yarn versionup ${{ github.event.inputs.semver }} --yes
           gh pr create --fill
         env:
           GH_TOKEN: ${{ github.token }}

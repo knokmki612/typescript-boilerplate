@@ -6,8 +6,7 @@
       "conventionalCommits": false,
       "message": "chore(release): %s",
       "noChangelog": true,
-      "noGitTagVersion": true,
-      "noPush": true
+      "noGitTagVersion": true
     }
   },
   "packages": [
