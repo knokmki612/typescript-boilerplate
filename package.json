@@ -1,7 +1,7 @@
 {
   "name": "typescript-boilerplate",
   "description": "One of the commonplace TypeScript boilerplate",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "author": "Kimiaki Kuno <knokmki612@gmail.com>",
   "bugs": {
     "url": "https://github.com/knokmki612/typescript-boilerplate/issues"
