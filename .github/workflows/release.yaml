@@ -32,6 +32,7 @@ jobs:
           git push origin release
           yarn versionup ${{ github.event.inputs.semver }} --yes
           git commit --all --message "chore(release): v$(cat lerna.json | jq -r .version)"
+          git push origin release
           gh pr create --fill --label release
         env:
           GH_TOKEN: ${{ github.token }}
