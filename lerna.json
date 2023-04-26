@@ -9,7 +9,5 @@
       "noPush": true
     }
   },
-  "packages": [
-    "."
-  ]
+  "packages": ["."]
 }
