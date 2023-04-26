@@ -36,3 +36,5 @@ jobs:
           gh pr create --fill --label release
         env:
           GH_TOKEN: ${{ github.token }}
+      - if: ${{ failure() }}
+        run: git push origin :release
