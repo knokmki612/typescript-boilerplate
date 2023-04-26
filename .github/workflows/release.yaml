@@ -1,0 +1,37 @@
+name: release
+on:
+  workflow_dispatch:
+    inputs:
+      semver:
+        description: next semantic version(s) value
+        required: true
+        default: patch
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+          - prerelease
+          - prepatch
+          - preminor
+          - premajor
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+          cache: "yarn"
+      - run: yarn install --check-files --frozen-lockfiles --non-interactive
+      - id: version
+        run: |
+          git config --global user.email "${{ github.actor }}"
+          git config --global user.name "${{ github.actor }}@users.noreply.github.com"
+          yarn versionup ${{ github.event.inputs.semver }} --yes
+          echo "result=$(cat lerna.json | jq -r .version)" >> $GITHUB_OUTPUT
+      - run: |
+          git switch -c release/v${{ steps.version.outputs.result }}
+          git push origin v${{ steps.version.outputs.result }}
+          gh pr create --fill
