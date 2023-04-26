@@ -31,6 +31,6 @@ jobs:
           git branch --move release
           git push origin release
           yarn versionup ${{ github.event.inputs.semver }} --yes
-          gh pr create --fill
+          gh pr create --fill --label release
         env:
           GH_TOKEN: ${{ github.token }}
