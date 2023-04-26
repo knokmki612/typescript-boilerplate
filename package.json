@@ -40,7 +40,7 @@
   "repository": "git@github.com:knokmki612/typescript-boilerplate.git",
   "scripts": {
     "build": "tsup index.ts",
-    "format": "prettier --write .",
+    "format": "prettier --write . !lerna.json",
     "lint": "eslint --fix .",
     "test": "jest --passWithNoTests",
     "versionup": "lerna version"
