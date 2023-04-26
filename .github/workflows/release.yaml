@@ -1,4 +1,4 @@
-name: release
+name: Release
 on:
   workflow_dispatch:
     inputs:
@@ -25,13 +25,12 @@ jobs:
           node-version: "18"
           cache: "yarn"
       - run: yarn install --check-files --frozen-lockfiles --non-interactive
-      - id: version
-        run: |
-          git config --global user.email "${{ github.actor }}"
-          git config --global user.name "${{ github.actor }}@users.noreply.github.com"
-          yarn versionup ${{ github.event.inputs.semver }} --yes
-          echo "result=$(cat lerna.json | jq -r .version)" >> $GITHUB_OUTPUT
       - run: |
-          git switch -c release/v${{ steps.version.outputs.result }}
-          git push origin release/v${{ steps.version.outputs.result }}
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git branch --move release
+          yarn versionup ${{ github.event.inputs.semver }} --yes
+          git push origin release
           gh pr create --fill
+        env:
+          GH_TOKEN: ${{ github.token }}
