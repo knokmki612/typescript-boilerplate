@@ -43,6 +43,6 @@
     "format": "prettier --write . !lerna.json",
     "lint": "eslint --fix .",
     "test": "jest --passWithNoTests",
-    "versionup": "lerna version"
+    "versionup": "lerna version --no-git-tag-version"
   }
 }
