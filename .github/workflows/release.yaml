@@ -33,5 +33,5 @@ jobs:
           echo "result=$(cat lerna.json | jq -r .version)" >> $GITHUB_OUTPUT
       - run: |
           git switch -c release/v${{ steps.version.outputs.result }}
-          git push origin v${{ steps.version.outputs.result }}
+          git push origin release/v${{ steps.version.outputs.result }}
           gh pr create --fill
