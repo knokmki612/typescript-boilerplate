@@ -36,6 +36,7 @@
   ],
   "license": "MIT",
   "main": "dist/index.js",
+  "packageManager": "yarn@1.22.19",
   "repository": "git@github.com:knokmki612/typescript-boilerplate.git",
   "scripts": {
     "build": "tsup index.ts",
@@ -43,6 +44,5 @@
     "lint": "eslint --fix .",
     "test": "jest --passWithNoTests",
     "versionup": "lerna version"
-  },
-  "packageManager": "yarn@1.22.19"
+  }
 }
