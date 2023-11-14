@@ -36,7 +36,7 @@
   ],
   "license": "MIT",
   "main": "dist/index.js",
-  "packageManager": "yarn@1.22.20",
+  "packageManager": "yarn@1.22.21",
   "repository": "git@github.com:knokmki612/typescript-boilerplate.git",
   "scripts": {
     "build": "tsup index.ts",
