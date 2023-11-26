@@ -7,7 +7,7 @@
     "url": "https://github.com/knokmki612/typescript-boilerplate/issues"
   },
   "devDependencies": {
-    "@lerna-lite/cli": "^2.1.0",
+    "@lerna-lite/cli": "^3.0.0",
     "@lerna-lite/version": "^2.1.0",
     "@tsconfig/node18-strictest": "1.0.0",
     "@types/jest": "29.5.10",
