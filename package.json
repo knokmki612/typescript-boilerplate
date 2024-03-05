@@ -25,7 +25,7 @@
     "typescript": "5.3.3"
   },
   "engines": {
-    "node": "18"
+    "node": "20"
   },
   "homepage": "https://github.com/knokmki612/typescript-boilerplate#readme",
   "keywords": [
